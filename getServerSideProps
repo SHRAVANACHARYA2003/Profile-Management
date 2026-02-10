@@ -1,0 +1,13 @@
+export async function getServerSideProps() {
+  try {
+    const res = await fetch(process.env.API_URL);
+    if (!res.ok) {
+      throw new Error(`Failed to fetch: ${res.status}`);
+    }
+    const data = await res.json();
+    return { props: { data } };
+  } catch (error) {
+    console.error('Fetch error:', error);
+    return { props: { data: null, error: error.message } };
+  }
+}
