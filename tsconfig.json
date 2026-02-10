@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/api/profiles/[id]/route.js", "app/api/profiles/route.js", "components/ProfileCard.js", "app/page.js", "app/profile/[id]/page.js", "data/profiles.js"  ],
   "exclude": ["node_modules"]
 }
